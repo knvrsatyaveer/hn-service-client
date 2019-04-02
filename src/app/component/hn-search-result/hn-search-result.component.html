@@ -1,24 +1,37 @@
 <html>
   <head>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   </head>
 
   <body>
-      <h1> Search Results</h1>
-      <table style="background: yellow; border: double">
-        <tr>
-          <th>Author</th>
-          <th>Story Title </th>
-          <th>Story Url</th>
-        </tr>
+  <script>
+    $(document).ready(function () {
+      $('#hnSearchResultTable').DataTable();
+    });
+  </script>
+    <div class="container" data-pagination="true"
+         data-id-field="Author"
+         data-page-list="[5, 10, 25, 50, 100, ALL]"
+         data-page-size="5" >
+        <h1 > Search Results</h1>
+        <table id="hnSearchResultTable" style="border: double;"
+               class="table table-striped table-bordered table-sm"
+               cellspacing="0" width="80%">
+              <tr>
+                <th>Author</th>
+                <th>Story Title </th>
+                <th>Story Url</th>
+              </tr>
 
-        -- {{hnSearchResult.hits}} ##
-        <tr *ngFor="let result of hnSearchResult.hits">
-          <td>{{result.query}}</td>
-          <td>{{result.story_title}}</td>
-          <td>{{result.story_url}}</td>
-        </tr>
-      </table>
+              <tr *ngFor="let result of hnSearchResult.hits">
+                <td>{{result.author}}</td>
+                <td>{{result.story_title}}</td>
+                <td>{{result.story_url}}</td>
+              </tr>
+        </table>
+    </div>
+
 
   </body>
 
