@@ -1,0 +1,19 @@
+<html>
+  <head>
+
+  </head>
+
+  <body>
+      <h1>Search HN</h1>
+  <form #hnSearchForm="ngForm" (ngSubmit)="onSubmit(hnSearchForm.value)">
+
+    <label for="search">Search</label>
+    <input type="text" [(ngModel)]="inputData" name="inputData" id="search"/>
+    <input type="submit" value="search">
+
+  </form>
+
+  </body>
+</html>
+
+<router-outlet></router-outlet>

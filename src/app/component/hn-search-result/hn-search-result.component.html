@@ -1,0 +1,25 @@
+<html>
+  <head>
+
+  </head>
+
+  <body>
+      <h1> Search Results</h1>
+      <table style="background: yellow; border: double">
+        <tr>
+          <th>Author</th>
+          <th>Story Title </th>
+          <th>Story Url</th>
+        </tr>
+
+        -- {{hnSearchResult.hits}} ##
+        <tr *ngFor="let result of hnSearchResult.hits">
+          <td>{{result.query}}</td>
+          <td>{{result.story_title}}</td>
+          <td>{{result.story_url}}</td>
+        </tr>
+      </table>
+
+  </body>
+
+</html>
