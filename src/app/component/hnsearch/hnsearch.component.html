@@ -14,6 +14,16 @@
     </div>
   </form>
 
+      <br/><br/><br/>
+
+      <div class="container" width="80%"  >
+        <p-dataTable [value]="hnSearchResult"  [rows]="5" [paginator]="true" [pageLinks]="5">
+          <p-header>Search Result</p-header>
+          <p-column field="author" header="author" data-value="author"></p-column>
+          <p-column field="story_title" header="story_title"></p-column>
+          <p-column field="story_url" header="story_url"></p-column>
+        </p-dataTable>
+      </div>
   </body>
 </html>
 

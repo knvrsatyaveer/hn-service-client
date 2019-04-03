@@ -9,6 +9,9 @@ import {Router} from "@angular/router";
 })
 export class HnsearchComponent implements OnInit {
 
+  hnSearchResult:any = [];
+
+
   constructor(private _service: SearchService, private router:Router) { }
 
   ngOnInit() {
@@ -20,8 +23,8 @@ export class HnsearchComponent implements OnInit {
      this._service.search(data.inputData)
       .subscribe(
         response=>{
-          console.log(" routing to search result"+response);
-          this.router.navigate(['/ngSearchResult']);
+          console.log(" routing to search result -- "+this._service.searchResult.hits);
+          this.hnSearchResult= this._service.searchResult.hits;
         },error=>{
           console.log(" error redirecting : ");
         }
