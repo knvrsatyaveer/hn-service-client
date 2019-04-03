@@ -10,14 +10,24 @@
       $('#hnSearchResultTable').DataTable();
     });
   </script>
-    <div class="container" data-pagination="true"
+
+  <div class="container" width="80%" >
+    <p-dataTable [value]="searchResultArray" [rows]="5" [paginator]="true" [pageLinks]="5">
+      <p-header>Search Result</p-header>
+      <p-column field="author" header="author"></p-column>
+      <p-column field="story_title" header="story_title"></p-column>
+      <p-column field="story_url" header="story_url"></p-column>
+    </p-dataTable>
+  </div>
+
+   <!-- <div class="container" data-pagination="true"
          data-id-field="Author"
          data-page-list="[5, 10, 25, 50, 100, ALL]"
          data-page-size="5" >
         <h1 > Search Results</h1>
         <table id="hnSearchResultTable" style="border: double;"
                class="table table-striped table-bordered table-sm"
-               cellspacing="0" width="80%">
+               cellspacing="0" >
               <tr>
                 <th>Author</th>
                 <th>Story Title </th>
@@ -30,7 +40,7 @@
                 <td>{{result.story_url}}</td>
               </tr>
         </table>
-    </div>
+    </div>-->
 
 
   </body>

@@ -9,6 +9,8 @@ import {HttpModule} from "@angular/http";
 import {AppRouterModule} from "./routing.module";
 import {FormsModule} from "@angular/forms";
 import {SearchService} from "./services/search.service";
+import {PaginatorModule} from "primeng/components/paginator/paginator";
+import {DataTableModule} from "primeng/components/datatable/datatable";
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import {SearchService} from "./services/search.service";
     AppRoutingModule,
     HttpModule,
     AppRouterModule,
-    FormsModule
+    FormsModule,
+    PaginatorModule,
+    DataTableModule
   ],
   providers: [SearchService],
   bootstrap: [HnsearchComponent]

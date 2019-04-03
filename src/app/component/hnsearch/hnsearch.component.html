@@ -4,12 +4,13 @@
   </head>
 
   <body>
-      <h1>Search HN</h1>
+      <h1 style="text-align: center">Hackher News Search</h1>
   <form #hnSearchForm="ngForm" (ngSubmit)="onSubmit(hnSearchForm.value)" >
-    <div align="center">
-      <label for="search">Search</label>
-      <input type="text" [(ngModel)]="inputData" name="inputData" id="search"/>
-      <input type="submit" value="search">
+    <div align="center" style="border:transparent">
+
+      <input type="text" [(ngModel)]="inputData" name="inputData" id="search" placeholder="Search.." style="border-radius: 10px"/>
+      <button type="submit" style="border-radius: 10px"><i class="fa fa-search"></i></button>
+
     </div>
   </form>
 
