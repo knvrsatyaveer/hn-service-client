@@ -23,7 +23,6 @@ export class HnsearchComponent implements OnInit {
      this._service.search(data.inputData)
       .subscribe(
         response=>{
-          console.log(" routing to search result -- "+this._service.searchResult.hits);
           this.hnSearchResult= this._service.searchResult.hits;
         },error=>{
           console.log(" error redirecting : ");
